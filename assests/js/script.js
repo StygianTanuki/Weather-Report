@@ -1,3 +1,18 @@
+var APIKey = "cf9803c3b377a9b6c5550c2755ccbd51"
+var searchButton = document.getElementById("search-btn")
+var cityLocation = document.getElementById("search-city")
+
+function search() {
+    var content = cityLocation.value
+    console.log(content)
+
+    var url = "api.openweathermap.org/data/2.5/forecast?" + content + "&appid=" + APIKey + "&units=imperial"
+
+    console.log(url)
+
+    
+}
+
 // 3 global variables
 // 1 for API KEY
 //1 for base url: openweathermap.org

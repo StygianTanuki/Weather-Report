@@ -13,7 +13,7 @@
     padding-top: 0px;
     /* color: hsl(206, 17%, 28%); */
     background-color: #3498db;
-    background: linear-gradient(0deg, var(--darkblue) 0%, var(--lightblue) 63%);
+    background: linear-gradient(0deg, var(--light) 0%, var(--lightblue) 63%);
   }
 
   /* Apply custom Google font */
@@ -25,4 +25,11 @@ body {
   h1 {
     font-size: 2em;
     margin: 0.67em 0;
+  }
+
+  .search {
+    padding-top: 20px;
+    padding-left: 20px;
+    border-bottom-style: solid;
+    border-width: 2px;
   }
