@@ -16,6 +16,9 @@
 // fucntions -- display 5 day forcast data from fetch request
 //--- need icon, tempt, humidity, date, wind speet
 
+function getApi() {
+    var apiURL = "api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={cf9803c3b377a9b6c5550c2755ccbd51}"
+}
 
 // create elements for each of the above
 
