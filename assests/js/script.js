@@ -10,8 +10,74 @@ function search() {
 
     console.log(url)
 
-    
+    fetch(url)
+
+    .then(function(response){
+        return response.json()
+    })
+    .then(function(data){ 
+        console.log(data);
+
+        var currentDay = data.list[0];
+        var currentDate = new Date();
+        var cityName = data.city.name;
+
+        var cadDiv = document.createElement("div");
+        cardDiv.classList.add("card", "mx-auto");
+
+
+
+        var cardBody = document.createElement("div");
+        cardBody.classList.add("cardBody");
+
+        var cardTitle = document.createElement("h1");
+        cardTitle.classList.add("cardTitle");
+        cardTitle.textContent = "Current Date: " + currentDate.toDateString();
+
+        var cityNametitle = document.createElement("h2");
+        cityNametitle.textContent = "City: " + cityName;
+
+        var temperature = document.createElement("p");
+        temperature.classList.add("card-text");
+        temperature.textContent = "Temperature: " + currentDay.main.temp;
+
+        var windSpeed = document.createElement("p");
+        windSpeed.classList.add("card-text");
+        windSpeed.textContent = "Wind Speed: " + currentDay.wind.speed;
+
+        var humidity = document.createElement("p");
+        humidity.classList.add("card-text");
+        humidity.textContent = "Humidity: " + currentDay.main.humidity + "%";
+
+        cardBody.appendChild(cardTitle);
+        cardBody.appendChild(cityNametitle);
+        cardBody.appendChild(temperature);
+        cardBody.appendChild(windSpeed);
+        cardBody.appendChild(humidity);
+
+        cardBody.appendChild(cardBody);
+
+        var weatherForcastContainer = document.getElementById("weatherForcast");
+        currentDay.appendChild(cardDiv);
+
+        var fiveDay = [
+            data.list[1],
+            data.list[9],
+            data.list[17],
+            data.list[25],
+            data.list[33]
+        ]
+
+        console.log(fiveDay)
+
+        for(i = 0; i < fiveDay.length; i++) {
+            var sectionBlock = document.createElement("div");
+            var d
+        }
+    })
 }
+
+searchButton.addEventListener("click", search)
 
 // 3 global variables
 // 1 for API KEY

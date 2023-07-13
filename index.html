@@ -25,11 +25,12 @@
     <title>Weather Report</title>
 </head>
 
-<body>
-  <body class="min-100-vh flex-column">
     <header class="p-5 text-center text-white bg-primary">
       <h1>Weather Report Dashboard</h1>
     </header>
+<body>
+
+  <body class="min-100-vh flex-column">
 
     <div class ="search">
       <h2 class ="mt-1">Search for a City:</h2>
@@ -37,6 +38,17 @@
       <button class ="btn btn-primary" type="button" id="search-button">
         <i class="fas fa-search"></i>
       </button>
+    </div>
+
+    <div>
+      <div id="weatherForcast">
+        <style class="text-center"></style>
+      </div>
+    </div>
+
+    <div>
+      <div id="fiveDays" class="row">
+      </div>
     </div>
 
           <!-- Section for the JQuery script used for the site-->
