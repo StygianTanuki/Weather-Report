@@ -2,14 +2,14 @@ var APIKey = "cf9803c3b377a9b6c5550c2755ccbd51";
 var searchButton = document.getElementById("search-button");
 var cityLocation = document.getElementById("search-city");
 var weatherBlock = document.getElementById("current-weather");
-var fiveDayblock = document.getElementById("five-day");
+var fiveDayblock = document.getElementById("fiveDay");
 var searchHistorycontainer = document.getElementById("search-history");
 
 function search() {
     var content = cityLocation.value;
     console.log(content);
 
-    var url = "https://api.openweathermap.org/data/2.5/forecast?" + content + "&appid=" + APIKey + "&units=imperial";
+    var url = "https://api.openweathermap.org/data/2.5/forecast?q=" + content + "&appid=" + APIKey + "&units=imperial";
 
 
     weatherBlock.innerHTML = "";
@@ -26,8 +26,8 @@ function search() {
         var currentDate = new Date();
         var cityName = data.city.name;
 
-        var cardDiv = document.createElement("div");
-        cardDiv.classList.add("card", "mx-auto");
+        var mainCardDiv = document.createElement("div");
+        mainCardDiv.classList.add("card", "mx-auto");
 
 
 
@@ -63,10 +63,9 @@ function search() {
         cardBody.appendChild(windSpeed);
         cardBody.appendChild(humidity);
 
-        cardBody.appendChild(cardBody);
 
-        cardDiv.appendChild(cardBody);
-        weatherBlock.appendChild(cardDiv);
+        mainCardDiv.appendChild(cardBody);
+        weatherBlock.appendChild(mainCardDiv);
 
         var fiveDay = [
             data.list[1],
@@ -112,7 +111,7 @@ function search() {
         }
 
         localCity(content);
-        searchHistory();
+        displaySearch();
     });
 }
 
@@ -155,7 +154,7 @@ function search() {
 
     function displaySearch() {
         var searchHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
-        var searchHistorycontainer = document.getElementById("search-history");
+        // var searchHistorycontainer = document.getElementById("search-history");
         searchHistorycontainer.innerHTML = "";
 
         for (var i = 0; i < searchHistory.length; i++) {
