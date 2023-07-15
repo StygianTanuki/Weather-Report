@@ -192,7 +192,7 @@ function search() {
 
             cityDiv.addEventListener("click", function (event) {
                 var cityName = event.target.textContent;
-                searchCity.value = cityName;
+                cityLocation.value = cityName;
                 search();
             });
 

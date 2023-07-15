@@ -7,7 +7,8 @@ This website was created to display a 5 day forcast using a search feature to lo
 
 This website is used to bring up a 5 day forcast for each searched city.
 
-![Screenshot of Website]()
+![Screenshot of Website](./assests/images/_C__Users_Felix_Documents_UCF_Homework_Homework_6_Weather-Report_index.html%20(2).png)
+![Screenshot of Website](./assests/images/_C__Users_Felix_Documents_UCF_Homework_Homework_6_Weather-Report_index.html%20(3).png)
 
 # Link
 https://stygiantanuki.github.io/Weather-Report/ 
